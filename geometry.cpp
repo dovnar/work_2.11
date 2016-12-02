@@ -7,7 +7,8 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 
-	std::cout << Area::getTriangleArea(2.0, 3.6) << std::endl
+	std::cout << "count " << Area::getCountOfClass() << std::endl //вот в чём дело!!!
+		<< Area::getTriangleArea(2.0, 3.6) << std::endl
 		<< Area::getTriangleArea(2.0, 3.6, 50, true) << std::endl
 		<< Area::getTriangleArea(2.0, 3.6, 2.6, false) << std::endl
 		<< Area::getRectangleArea(3.6, 2.5) << std::endl
