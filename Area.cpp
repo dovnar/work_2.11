@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Area.h"
-#define PI 3.14159265358979323846		// ÷èñëî ÏÈ
+#define PI 3.14159265358979323846		// Ã·Ã¨Ã±Ã«Ã® ÃÃˆ
 
 int Area::count = 0;
 
@@ -57,7 +57,7 @@ float Area::getTriangleArea(float party1, float party2, float corner, bool flag)
 		if (verificationData(false, corner))
 			return 1;
 		else
-			return ((0.5 * party1) * party2 * (sin(corner* PI / 180) * PI / 180));
+			return ((0.5 * party1) * party2 * (sin(corner* PI / 180) / PI * 180));
 	}
 	else
 	{
@@ -92,7 +92,7 @@ float Area::getSquareArea(float party)
 
 float Area::getSquareArea(float party1, float party2)
 {
-	if (party1 == party2)
+	if (party1 != party2)
 		return 1;
 	else if (verificationData(true, party1))
 		return 1;
@@ -123,7 +123,7 @@ float Area::getParallelogramArea(float party1, float party2, float corner)
 		return 1;
 	else
 		++count;
-	return (party1 * party2 * (sin(corner* PI / 180) * PI / 180));
+	return (party1 * party2 * (sin(corner* PI / 180) / PI * 180));
 }
 
 ///rhombus ->
@@ -138,7 +138,7 @@ float Area::getRhombusArea(float party, float corner, bool flag)
 			return 1;
 		else
 			++count;
-		return (party * party * (sin(corner* PI / 180) * PI / 180));
+		return (party * party * (sin(corner* PI / 180)  / PI * 180));
 	}
 	else
 	{
